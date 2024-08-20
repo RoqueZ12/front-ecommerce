@@ -32,7 +32,7 @@ export const AuthProvider = ({children}) =>{
   };
   const LogOutContext = async() => {
     try{
-      await axios.post(`${URL}/auth/logout`, {withCredentials: true});
+      await axios.post(`${URL}/auth/logout`,{}, {withCredentials: true});
       setUser(null)
       setIsAuthenticated(false)
       navigate('/login')
