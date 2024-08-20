@@ -16,6 +16,8 @@ export const AuthProvider = ({children}) =>{
   };
   const LoginContext = async (user) => {
     try {
+      console.log("URL:", URL);
+
       const resp = await axios.post(`${URL}/auth/login`, user);
       setUser(resp.data.user); // Asegúrate de que la respuesta tiene una propiedad 'user'
       setIsAuthenticated(true);
@@ -88,7 +90,7 @@ export const AuthProvider = ({children}) =>{
 
   const avoidToCart = useCallback( async () => {
     try {
-      const response = await axios.delete(`${URL}/empty`, { withCredentials: true });
+      const response = await axios.delete(`${URL}/cart/empty`, { withCredentials: true });
       console.log('Cart emptied:', response.data);
       // Actualizar el estado del carrito en el frontend si es necesario
       await getCart();
@@ -100,7 +102,7 @@ export const AuthProvider = ({children}) =>{
   useEffect(() => {
     const checkLogin = async () => { 
       try {
-        const res = await axios.get(`${URL}/protected`, { withCredentials: true });
+        const res = await axios.get(`${URL}/api/protected`, { withCredentials: true });
 
         if (res.status === 200) {
           setIsAuthenticated(true);
