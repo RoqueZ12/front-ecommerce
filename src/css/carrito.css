@@ -1,0 +1,56 @@
+/* carrito.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* Color de fondo general */
+}
+
+.table-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Ajusta la altura del contenedor para centrar verticalmente */
+  padding: 20px;
+}
+
+.custom-table {
+  width: 100%;
+  max-width: 900px; /* Ancho máximo de la tabla */
+  border-collapse: collapse; /* Quita el espacio entre bordes de las celdas */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-color: #ffffff; /* Fondo blanco para la tabla */
+}
+
+.custom-table th, .custom-table td {
+  text-align: left; /* Alinea el texto a la izquierda por defecto */
+  padding: 12px; /* Espaciado en las celdas */
+  border-bottom: 1px solid #dee2e6; /* Línea divisoria entre filas */
+}
+
+.custom-table thead {
+  background-color: #007bff; /* Color de fondo para el encabezado */
+  color: #ffffff; /* Color del texto del encabezado */
+}
+
+.custom-table tbody tr:hover {
+  background-color: #f1f1f1; /* Color de fondo al pasar el mouse sobre las filas */
+}
+
+.price-cell {
+  text-align: right; /* Alinea el texto a la derecha para la celda del precio */
+}
+
+.btn-delete {
+  background-color: #dc3545; /* Color de fondo para el botón de borrar */
+  color: #ffffff; /* Color del texto del botón */
+  border: none; /* Sin bordes */
+  padding: 6px 12px; /* Espaciado interno del botón */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  font-size: 14px; /* Tamaño de la fuente */
+}
+
+.btn-delete:hover {
+  background-color: #c82333; /* Color de fondo del botón al pasar el mouse */
+}

@@ -1,0 +1,184 @@
+/* body.css */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Container for the entire body component */
+.body-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Box container to center content */
+.box-container {
+  width: 100%;
+  max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Main section styles */
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  align-items: stretch; /* Asegura que ambos lados se estiren por igual */
+  margin-bottom: 20px;
+}
+
+/* Content section (left side) */
+.boxmain-izq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Agrega un tamaño mínimo si es necesario */
+  min-height: 100%; 
+}
+
+/* Heading inside box */
+.boxmain-izq h3 {
+  font-size: 2rem;
+  margin: 0;
+  color: #007bff;
+}
+
+/* Paragraphs inside box */
+.boxmain-izq p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Strong text inside box */
+.boxmain-izq strong {
+  color: #e83e8c;
+  font-weight: 700;
+}
+
+/* Image section (right side) */
+.boxmain-der {
+  display: flex; /* Asegura que el contenido se centre en el contenedor */
+  justify-content: center; /* Centra horizontalmente la imagen */
+  align-items: center; /* Centra verticalmente la imagen */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 100%;
+}
+
+.boxmain-der img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Title styles */
+.main h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Carousel styles */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 300px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-items {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  height: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+hr {
+  margin: 20px 0;
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #d31919;
+}
+
+.product-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5  rem;
+  padding: 1rem;
+}
+.product{
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-right: 30px;
+}
+.product img{
+  width: 400px;
+  height: 200px;
+}
